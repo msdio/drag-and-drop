@@ -1,4 +1,14 @@
-const DraggableItem = ({ stack }: { stack: string }) => {
+import { DragEvent, useRef } from "react";
+
+const DraggableItem = ({
+  stack,
+  over,
+  start,
+}: {
+  stack: string;
+  over: any;
+  start: any;
+}) => {
   return (
     <div
       style={{
@@ -11,7 +21,11 @@ const DraggableItem = ({ stack }: { stack: string }) => {
         borderRadius: "20px",
         padding: "3px 15px",
         cursor: "pointer",
+        userSelect: "none",
       }}
+      draggable
+      onDragStart={start}
+      onDragOver={over}
     >
       {stack}
     </div>

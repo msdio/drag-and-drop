@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AdditionalStacks, Stacks } from "../data";
+import { AdditionalStacks, Stacks } from "../../data";
 import DraggableItem from "./DraggableItem";
 
 const DragContainer = () => {
@@ -18,7 +18,7 @@ const DragContainer = () => {
 
     timer = setTimeout(() => {
       reorderArray(index);
-    }, 200);
+    }, 20);
   };
 
   const reorderArray = (idx: number) => {

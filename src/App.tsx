@@ -1,4 +1,4 @@
-import DragContainer from "./components/DragContainer";
+import DragContainer from "./components/drag/DragContainer";
 
 function App() {
   return (
